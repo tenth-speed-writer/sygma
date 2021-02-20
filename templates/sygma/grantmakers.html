@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grantmakers</title>
+</head>
+<body>
+    <table id="grantmaker-list">
+        {% for gm in grantmakers %}
+            <tr>
+                <td class="gm-list-name">{{ gm.name }}</td>
+                <td class="gm-list-kind">{{ gm.kind }}</td>
+                <td class="gm-city-state">{{ gm.city }} {{ gm.state }}</td>
+                <td class="add-edit-link-cell">
+                    <a class="add-edit-link" href="/sygma/grantmaker/?id={{ gm.id }}">
+                        View/Edit
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

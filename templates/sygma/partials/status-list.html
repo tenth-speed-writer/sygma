@@ -1,0 +1,9 @@
+{% for s in statuses %}
+    <div class="grant-status-row" id="status-{{ s.id }}">
+        {{ s.status }} {{ s.details }} {{ s.amount }} {{ s.updated_on }}
+
+        <!-- Todo: Replace this with an icon-->
+        <button class="edit-status-button"
+                onclick="make_status_editable({{ s.id }}); return false;">Edit</button>
+    </div>
+{% endfor %}

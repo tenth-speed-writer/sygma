@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grant</title>
+    {% load static %}
+    <script src="{% static "js/jquery-3.4.1.js" %}"></script>
+    <script src="{% static "js/grant.js" %}"></script>
+</head>
+<body>
+    <form class="grant-input" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input class="grant-save-button"
+               type="submit"
+               value="Save">
+    </form>
+    <div id="grant-statuses-outer">
+        <button onclick="new_blank_status(); return false;">New Status</button>
+        <div id="grant-statuses"></div>
+    </div>
+    <div id="grant-obligations-outer">
+        <button onclick="new_blank_obligation(); return false;">New Obligation</button>
+        <div id="grant-obligations"></div>
+    </div>
+</body>
+</html>

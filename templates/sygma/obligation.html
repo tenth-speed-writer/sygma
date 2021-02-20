@@ -1,0 +1,14 @@
+<div>
+        <form id='obligation-form-{{ form.id }}'
+              class="obligation-input"
+              method="post">
+            {% csrf_token %}
+            {{ form }}
+
+            <!-- save button -->
+            <input class="obligation-save-button"
+                   type="submit"
+                   value="Save"
+                   formaction="/sygma/obligation/">
+        </form>
+</div>

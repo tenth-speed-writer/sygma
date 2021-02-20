@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grants</title>
+</head>
+<body>
+    <table id="grant-list">
+        {% for s in statuses %}
+            <tr>
+                <td class="status-status">{{ s.status }}</td>
+                <td class="status-details">{{ s.details }}</td>
+                <td class="status-amount">${{ s.amount }}</td>
+                <td class="status-date">{{ s.updated_on }}</td>
+                <td class="add-edit-link-cell">
+                    <a class="add-edit-link" href="/sygma/status?id={{ g.id }}">
+                        View/Edit
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

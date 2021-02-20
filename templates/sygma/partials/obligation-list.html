@@ -1,0 +1,9 @@
+{% for o in obligations %}
+    <div class="grant-obligation-row" id="obligation-{{ o.id }}">
+        {{ o.title }} - {{ o.due }} - {{ o.details }}
+
+        <!-- Todo: Replace this with an icon-->
+        <button class="edit-obligation-button"
+                onclick="make_obligation_editable({{ o.id }}); return false;">Edit</button>
+    </div>
+{% endfor %}

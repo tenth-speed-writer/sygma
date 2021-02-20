@@ -1,0 +1,14 @@
+<div>
+        <form id='status-form-{{ form.id }}'
+              class="status-input"
+              method="post">
+            {% csrf_token %}
+            {{ form }}
+
+            <!-- save button -->
+            <input class="status-save-button"
+                   type="submit"
+                   value="Save"
+                   formaction="/sygma/status/">
+        </form>
+</div>
